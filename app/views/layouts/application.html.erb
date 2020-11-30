@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ApoinfoV2</title>
+    <title>ApoInfo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+      <div class="nav">
+        <div class="nav-left">
+          <%= link_to "ApoInfo", root_path %>
+        </div>
+        <div class="nav-right">
+          <%= link_to "新規登録", root_path, class: :right_button %>
+          <%= link_to "ログイン", root_path, class: :right_button %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright ©️ ApoInfo All rights reserved.</p>
+    </footer>
   </body>
 </html>

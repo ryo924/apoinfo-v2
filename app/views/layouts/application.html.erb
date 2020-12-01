@@ -14,10 +14,18 @@
         <div class="nav-left">
           <%= link_to "ApoInfo", root_path %>
         </div>
-        <div class="nav-right">
-          <%= link_to "新規登録", root_path, class: :right_button %>
-          <%= link_to "ログイン", root_path, class: :right_button %>
-        </div>
+        <% unless user_signed_in? %>
+          <div class="nav-right">
+            <%= link_to "新規登録", new_user_registration_path, class: :right_button %>
+            <%= link_to "ログイン", new_user_session_path, class: :right_button %>
+          </div>
+        <% else %>
+          <div class="nav-right">
+            <%= link_to "アポイント登録", root_path, class: :right_button %>
+            <%= link_to "チャットルーム", root_path, class: :right_button %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :right_button %>
+          </div>
+        <% end %>
       </div>
     </header>
     <%= yield %>

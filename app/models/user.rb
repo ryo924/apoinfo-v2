@@ -7,6 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :occupation
+    validates :watchword
   end
 
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "は半角英数字で入力してください"}, length: { minimum: 8}

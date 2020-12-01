@@ -1,0 +1,81 @@
+<%= form_with model: @appointment, class: 'registration-main', local: true do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <div class='form-header-text'>
+      アポイント登録情報入力
+    </div>
+  </div>
+  <div class="registration-error">
+  <%= render 'shared/error_messages', model: f.object %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">タイトル</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :title, class:"input-default", placeholder:"例) 年末挨拶" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">取引先名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :company, class:"input-default", placeholder:"例）浅草通信株式会社" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">顧客名</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :customer, class:"input-default", placeholder:"例）鈴木氏" %>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">日程</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="input-default-choice">
+      <%= raw sprintf(
+                    f.date_select(
+                      :date,
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: (Time.now.year),
+                      end_year: (Time.now.year + 1),
+                      date_separator: '%s'),
+                    "年", "月") + "日" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">場所</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div>
+      <%= f.text_field :place, class:"input-default", placeholder:"例) 浅草通信のオフィス" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">目的</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :purpose, class:"input-default-area" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-text-wrap">
+      <label class="form-text">顧客ステータス</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="input-default-choice">
+      <%= f.collection_select(:relation_id, Relation.all, :id, :name, {}) %>
+    </div>
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "新規登録", class:"register-red-btn" %>
+  </div>
+</div>
+<% end %>

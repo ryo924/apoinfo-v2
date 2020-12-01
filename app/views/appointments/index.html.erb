@@ -1,3 +1,4 @@
+<% unless user_signed_in? %>
 <div class="wrapper">
   <div class="content">
     <p class="concept">チームでの営業活動を、もっとスムーズに。</p>
@@ -28,3 +29,8 @@
     </div>
   </div>
 </div>
+<% else %>
+  <div class="login-wrapper">
+    <div class="list">アポイント一覧</div>
+  </div>
+<% end %>

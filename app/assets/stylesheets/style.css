@@ -179,6 +179,11 @@ a {
   margin-bottom: 15px;
 }
 
+/* ログイン後トップページ */
+.login-wrapper {
+  min-height: 100vh;
+}
+
 /* フッター */
 .footer {
  background-color: white;
@@ -193,7 +198,7 @@ a {
   font-size: 10px;
 }
 
-/* 新規登録画面 */
+/* ユーザー管理画面 */
 .registration-main {
   width: 100%;
   min-width: 800px;
@@ -307,6 +312,16 @@ a {
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.registration-error {
+  color: #ea352d;
+  text-align: center;
+}
+
+.login-flash-message {
+  color: #ea352d;
+  text-align: center;
 }
 
 /* セカンドヘッダー */

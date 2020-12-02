@@ -197,6 +197,7 @@ table th {
   text-align: center;
   color: #fff;
   background-color: #777777;
+  border: 1px solid #fff;
 }
 
 table td {
@@ -382,4 +383,32 @@ table td {
   background: #fff;
   font-size: 16px;
   resize: none;
+}
+
+/* アポイント詳細画面 */
+.show-wrapper {
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+.show-title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.show-button {
+  text-align: center;
+}
+
+.show_btn {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  background-color: #777777;
+}
+
+.show_btn:hover {
+  color: #fff;
+  background-color: #000022;
 }

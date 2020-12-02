@@ -13,9 +13,6 @@
     <td><%= appointment.company %></td>
     <td><%= appointment.relation.name %></td>
     <td><%= appointment.user.name %></td>
-    <td><%= "詳細リンク" %></td>
+    <td><%= link_to "詳細表示", appointment_path(appointment) %></td>
   </tr>
 </table>
-
-<div>
-</div>

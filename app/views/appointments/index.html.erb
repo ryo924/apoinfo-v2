@@ -32,5 +32,8 @@
 <% else %>
   <div class="login-wrapper">
     <div class="list">アポイント一覧</div>
+    <div>
+      <%= render partial: 'appointment', collection: @appointments %>
+    </div>
   </div>
 <% end %>

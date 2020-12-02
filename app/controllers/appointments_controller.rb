@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
 
   def index
+    @appointments = Appointment.all.order(created_at: "DESC")
   end
 
   def new

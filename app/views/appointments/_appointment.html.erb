@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>日程</th>
+    <th>タイトル</th>
+    <th>取引先名</th>
+    <th>顧客ステータス</th>
+    <th>作成者</th>
+    <th>詳細</th>
+  </tr>
+  <tr>
+    <td><%= appointment.date %></td>
+    <td><%= appointment.title %></td>
+    <td><%= appointment.company %></td>
+    <td><%= appointment.relation.name %></td>
+    <td><%= appointment.user.name %></td>
+    <td><%= "詳細リンク" %></td>
+  </tr>
+</table>
+
+<div>
+</div>

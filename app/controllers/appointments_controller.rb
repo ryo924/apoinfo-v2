@@ -19,6 +19,8 @@ class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
+    @comment = Comment.new
+    @comments = @appointment.comments
   end
 
   def edit

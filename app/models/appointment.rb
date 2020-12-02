@@ -13,6 +13,7 @@ class Appointment < ApplicationRecord
   validates :relation_id, numericality: { other_than: 1 , message: "を入力してください"}
 
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :relation

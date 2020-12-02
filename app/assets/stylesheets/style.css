@@ -412,3 +412,41 @@ table td {
   color: #fff;
   background-color: #000022;
 }
+
+/* コメント画面 */
+.comment-wrapper {
+  background-color: #DDDDDD;
+  min-height: 250px;
+  padding: 20px;
+}
+
+.comment-top {
+  font-weight: bold;
+}
+
+.comment-format {
+  display: flex;
+}
+
+.comment_form {
+  width: 300px;
+}
+
+.comment_input {
+  color: #fff;
+  background-color: #777777;
+  padding: 3px 10px;
+  border: 1px solid #777777;
+  border-radius: 3px;
+}
+
+.comments-lists {
+  background-color: #DDDDDD;
+  margin: 10px 0px;
+}
+
+.comments-list {
+  text-decoration: underline;
+  list-style-type: square;
+  margin-top: 10px;
+}

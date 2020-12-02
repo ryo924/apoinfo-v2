@@ -1,0 +1,35 @@
+<div class="show-wrapper">
+  <div class="show-title"><%= @appointment.title %></div>
+    <% if current_user == @appointment.user %>
+      <div class="show-button">
+        <%= link_to "編集する", edit_appointment_path(@appointment), class: :show_btn %>
+        <%= link_to "削除する", appointment_path(@appointment), method: :delete, class: :show_btn %>
+      </div>
+    <% end %>
+  <table>
+    <tr>
+      <th>日程</th>
+      <td><%= @appointment.date %></td>
+    </tr>
+    <tr>
+      <th>取引先名</th>
+      <td><%= @appointment.company %></td>
+    </tr>
+    <tr>
+      <th>顧客名</th>
+      <td><%= @appointment.customer %></td>
+    </tr>
+    <tr>
+      <th>場所</th>
+      <td><%= @appointment.place %></td>
+    </tr>
+    <tr>
+      <th>目的</th>
+      <td><%= @appointment.purpose %></td>
+    </tr>
+    <tr>
+      <th>顧客ステータス</th>
+      <td><%= @appointment.relation.name %></td>
+    </tr>
+  </table>
+</div>

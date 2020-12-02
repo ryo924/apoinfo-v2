@@ -33,23 +33,20 @@
     </tr>
   </table>
   <div class='comment-wrapper'>
-  <%= form_with model: [@appointment, @comment], local: true do |f| %>
-
-  <label class="comment-top">＜コメントスペース＞</label>
-  
-  <div class="comment-format">
-    <%= f.text_field :text, class: :comment_form %>
-    <%= f.submit "送信", class: :comment_input %>
-  </div>
-
-  <% end %>
-  <ul class="comments-lists">
-    <% @comments.each do |comment| %>
-      <li class="comments-list">
-        <%= comment.text %>
-        <%= "by #{comment.user.name}" %>
-      </li>
+    <%= form_with model: [@appointment, @comment], local: true do |f| %>
+      <label class="comment-top">＜コメントスペース＞</label>
+      <div class="comment-format">
+        <%= f.text_field :text, class: :comment_form %>
+        <%= f.submit "送信", class: :comment_input %>
+      </div>
     <% end %>
-  </ul>
+    <ul class="comments-lists">
+      <% @comments.each do |comment| %>
+       <li class="comments-list">
+          <%= comment.text %>
+          <%= "by #{comment.user.name}" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>

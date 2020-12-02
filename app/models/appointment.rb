@@ -14,6 +14,7 @@ class Appointment < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :profiles, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :relation

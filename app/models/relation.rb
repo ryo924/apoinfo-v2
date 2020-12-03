@@ -1,8 +1,8 @@
 class Relation < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: '新規顧客' },
-    { id: 3, name: '既存顧客' }
+    { id: 2, name: '新規先' },
+    { id: 3, name: '既往先' }
   ]
 
   include ActiveHash::Associations

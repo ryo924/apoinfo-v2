@@ -17,7 +17,7 @@
     </tr>
     <tr>
       <th>顧客名</th>
-      <td><%= @appointment.customer %></td>
+      <td><%= link_to @appointment.customer, appointment_profiles_path(@appointment) %></td>
     </tr>
     <tr>
       <th>場所</th>
@@ -28,7 +28,7 @@
       <td><%= @appointment.purpose %></td>
     </tr>
     <tr>
-      <th>顧客ステータス</th>
+      <th>取引状況</th>
       <td><%= @appointment.relation.name %></td>
     </tr>
   </table>

@@ -1,0 +1,9 @@
+<div class="login-wrapper">
+  <div class="list">顧客プロフィール一覧</div>
+  <div class="profile-button">
+    <%= link_to "顧客プロフィール登録", new_appointment_profile_path(@appointment), class: :profile_btn %>
+  </div>
+  <div>
+    <%= render partial: 'profile', collection: @profiles %>
+  </div>
+</div>

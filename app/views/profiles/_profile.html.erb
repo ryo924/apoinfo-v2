@@ -1,0 +1,16 @@
+<% if @appointment.id == profile.appointment_id %>
+  <table>
+    <tr>
+      <th>氏名</th>
+      <th>所属</th>
+      <th>役職</th>
+      <th colspan="2">備考</th>
+    </tr>
+    <tr>
+      <td><%= profile.customer_name %></td>
+      <td><%= profile.customer_occupation %></td>
+      <td><%= profile.position %></td>
+      <td><%= profile.note %></td>
+    </tr>
+  </table>
+<% end %>

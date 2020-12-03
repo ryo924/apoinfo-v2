@@ -440,6 +440,11 @@ table td {
   border-radius: 3px;
 }
 
+.comment_input:hover {
+  color: #fff;
+  background-color: #000022;
+}
+
 .comments-lists {
   background-color: #DDDDDD;
   margin: 10px 0px;
@@ -469,6 +474,27 @@ table td {
   background-color: #000022;
 }
 
-.profile-note {
-  
+/* 検索フォーム */
+.search-form {
+  text-align: center;
+  padding-top: 32px;
+}
+.search-input {
+  text-align: center;
+  width: 20%;
+  height: 30px;
+  margin-right: 10px;
+}
+.search-btn {
+  width: 10%;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 4px;
+  color: #fff;
+  background-color: #777777;
+}
+
+.search-btn:hover {
+  color: #fff;
+  background-color: #000022;
 }

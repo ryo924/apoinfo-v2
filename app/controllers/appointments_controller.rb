@@ -45,6 +45,10 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def search
+    @appointments = Appointment.search(params[:keyword]).order(created_at: "DESC")
+  end
+
   private
   def appointment_params
     params.require(:appointment).permit(:title, :company, :customer, :date, :place, :purpose, :relation_id).merge(user_id: current_user.id)

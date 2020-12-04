@@ -290,14 +290,6 @@ table td {
   margin-top: 3px;
 }
 
-.form-info-header {
-  font-weight: bold;
-}
-
-.form-info-text {
-  font-size: 15px;
-}
-
 .input-name {
   width: 130px;
   margin: 5px 20px 0 20px;
@@ -480,10 +472,9 @@ table td {
   padding-top: 32px;
 }
 .search-input {
-  text-align: center;
   width: 20%;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .search-btn {
   width: 10%;
@@ -495,6 +486,52 @@ table td {
 }
 
 .search-btn:hover {
+  color: #fff;
+  background-color: #000022;
+}
+
+/* チャット画面 */
+.chat-wrapper {
+  min-height: 100vh;
+  background-color: #eeeeee;
+  margin-left: 80px;
+}
+
+.room-wrapper {
+  margin-left: 50px;
+}
+
+.chat{
+  border: 1px solid;
+  width: 60%;
+  margin-top: 30px;
+  background-color: #fff;
+}
+
+.chat-date{
+  color: gray;
+}
+
+div[data-check="true"] {
+  background: #585555;
+}
+
+.chat-input {
+  width: 30%;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.chat-btn {
+  width: 10%;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 4px;
+  color: #fff;
+  background-color: #777777;
+}
+
+.chat-btn:hover {
   color: #fff;
   background-color: #000022;
 }

@@ -3,8 +3,6 @@ ja:
   attributes:
     user:
       name: 氏名
-      occupation: 所属
-      watchword: 合言葉
     appointment:
       title: タイトル
       company: 取引先名
@@ -16,3 +14,7 @@ ja:
     profile:
       customer_name: 氏名
       customer_occupation: 所属
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%m/%d %H:%M"

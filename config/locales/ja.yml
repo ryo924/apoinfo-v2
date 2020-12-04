@@ -1,0 +1,18 @@
+ja:
+ activerecord:
+  attributes:
+    user:
+      name: 氏名
+      occupation: 所属
+      watchword: 合言葉
+    appointment:
+      title: タイトル
+      company: 取引先名
+      customer: 顧客名
+      date: 日程
+      place: 場所
+      purpose: 目的
+      relation_id: 取引状況
+    profile:
+      customer_name: 氏名
+      customer_occupation: 所属

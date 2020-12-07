@@ -1,23 +1,22 @@
 <div class="chat-wrapper">
-  <div class="page-top">チャットルーム</div>
   <div class="room-wrapper">
-  <%= form_with url:  "/chats", method: :post,id: "form" do |form| %>
-    <%= form.text_field :content, placeholder: "例）to〇〇さん／メッセージ／from〇〇", class: "chat-input" %>
-    <%= form.submit '投稿する' , id: "submit" , class: "chat-btn" %>
-  <% end %>
+    <%= form_with url:  "/chats", method: :post,id: "form", class: "chat-form" do |form| %>
+      <%= form.text_field :content, placeholder: "例）to〇〇さん／メッセージ／from〇〇", class: "chat-input" %>
+      <%= form.submit '投稿する' , id: "submit" , class: "chat-btn" %>
+    <% end %>
 
-  <div id="list">
-  </div>
+    <div id="list">
+    </div>
 
-  <% @chats.each do |chat| %>
-  <div class="chat" data-id=<%= chat.id %> data-check=<%= chat.checked %>>
-    <div class="chat-date">
-      投稿日時：<%= l chat.created_at, format: :short %>
-    </div>
-    <div class="chat-content">
-      <%= chat.content %>
-    </div>
-  </div>
-  <% end %>
+    <% @chats.each do |chat| %>
+      <div class="chat" data-id=<%= chat.id %> data-check=<%= chat.checked %>>
+        <div class="chat-date">
+          投稿日時：<%= l chat.created_at, format: :short %>
+        </div>
+        <div class="chat-content">
+          <%= chat.content %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

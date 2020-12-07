@@ -1,11 +1,14 @@
 <div class="show-wrapper">
   <div class="show-title"><%= @appointment.title %></div>
-    <% if current_user == @appointment.user %>
-      <div class="show-button">
-        <%= link_to "編集する", edit_appointment_path(@appointment), class: :show_btn %>
-        <%= link_to "削除する", appointment_path(@appointment), method: :delete, class: :show_btn %>
-      </div>
-    <% end %>
+  <% if current_user == @appointment.user %>
+    <div class="show-button">
+      <%= link_to "編集する", edit_appointment_path(@appointment), class: :show_btn %>
+      <%= link_to "削除する", appointment_path(@appointment), method: :delete, class: :show_btn %>
+    </div>
+    <div class="show-button">
+      <%= link_to "顧客プロフィール", appointment_profiles_path(@appointment), class: :show_btn %>
+    </div>
+  <% end %>
   <table>
     <tr>
       <th>日程</th>
@@ -17,7 +20,7 @@
     </tr>
     <tr>
       <th>顧客名</th>
-      <td><%= link_to @appointment.customer, appointment_profiles_path(@appointment) %></td>
+      <td><%= @appointment.customer %></td>
     </tr>
     <tr>
       <th>場所</th>

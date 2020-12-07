@@ -7,8 +7,6 @@ html,
 body,
 ul,
 li,
-h1,
-h2,
 p,
 div {
   margin: 0;
@@ -22,11 +20,6 @@ body {
 
 li {
   list-style: none;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
 }
 
 a {
@@ -58,15 +51,14 @@ a {
 
 .right_button {
   margin-left: 10px;
-  border: 1px solid #000022;
-  border-radius: 3px;
-  padding: 5px;
+  padding: 3px;
   color: #000022;
 }
 
 .right_button:hover {
   color: #fff;
   background-color: #000022;
+  border-radius: 3px;
 }
 
 /* トップページ */
@@ -109,6 +101,7 @@ a {
 .appointment {
   color: #fff;
   text-align: center;
+  text-shadow: 3px 3px 3px black;
   margin-right: 50px;
   font-size: 30px;
   border: 1px solid #fff;
@@ -125,6 +118,7 @@ a {
 .information {
   color: #fff;
   text-align: center;
+  text-shadow: 3px 3px 3px black;
   margin-left: 50px;
   font-size: 30px;
   border: 1px solid #fff;
@@ -148,6 +142,7 @@ a {
   flex-direction: column;
   margin: 0px 300px;
   text-shadow: 3px 3px 3px black;
+  font-weight: bold;
   color: #fff;
   opacity: 0;
    animation-name: fadein-bottom;
@@ -171,7 +166,6 @@ a {
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
-  
 }
 
 .detail-sub {
@@ -198,12 +192,14 @@ table th {
   color: #fff;
   background-color: #777777;
   border: 1px solid #fff;
+  text-shadow: 1px 1px 1px black;
 }
 
 table td {
   padding: 30px;
   text-align: center;
   background-color: #fff;
+  font-weight: bold;
 }
 
 /* フッター */
@@ -385,11 +381,14 @@ table td {
 
 .show-title {
   text-align: center;
-  padding-top: 50px;
+  padding: 50px 0px 10px 0px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .show-button {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .show_btn {
@@ -451,6 +450,7 @@ table td {
 /* プロフィール画面 */
 .profile-button {
   text-align: center;
+  padding-top: 20px;
 }
 
 .profile_btn {
@@ -499,6 +499,10 @@ table td {
 
 .room-wrapper {
   margin-left: 50px;
+}
+
+.chat-form {
+  padding-top: 30px;
 }
 
 .chat{

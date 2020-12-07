@@ -9,30 +9,29 @@
     </div>
     <div class="hidden" id="remove-hidden">
       <div class="detail-show">
-        <p class="detail-top">＜アポイント登録機能＞</p>
-        <p class="detail-sub">日程順でアポイントを一覧表示、往訪予定が一目でわかる</p>
-        <p class="detail-sub">スケジュールだけでなく、顧客往訪時に必要な情報を一括管理</p>
+        <p class=detail-top>＜アポイント登録機能＞</p>
+        <p class="detail-sub">アポイントの登録・一覧表示・詳細表示が可能</p>
+        <p class="detail-sub">チームメンバーの営業活動状況を簡単に把握</p>
         <p class="detail-top">＜顧客プロフィール登録機能＞</p>
-        <p class="detail-sub">面談者の情報をアポイントに紐付けて保存</p>
-        <p class="detail-sub">面談者の役職等、詳細情報も一括管理</p>
+        <p class="detail-sub">登録されたアポイントに紐づいた顧客プロフィール登録・一覧表示が可能</p>
+        <p class="detail-sub">面談者が営業活動におけるキーマンかどうか簡単に把握</p>
       </div>
     </div>
     <div class="hidden" id="remove-hidden2">
       <div class="detail-show">
-        <p class="detail-top">＜アポイント閲覧機能＞</p>
-        <p class="detail-sub">チームメンバーの営業活動予定を一覧表示</p>
-        <p class="detail-sub"></p>
-        <p class="detail-top">＜コメント・チャット機能＞</p>
-        <p class="detail-sub">アポイント毎に指示・アドバイスをコメント可能</p>
-        <p class="detail-sub">チームメンバー間での情報共有を促進するためのチャットルーム有り</p>
+        <p class="detail-top">＜コメント機能＞</p>
+        <p class="detail-sub">登録されたアポイント毎にコメント投稿が可能</p>
+        <p class="detail-sub">コメントを通じて、面談に向けたアドバイス・指示</p>
+        <p class="detail-top">＜チャット機能＞</p>
+        <p class="detail-sub">チーム全員に対して開かれたチャットルームが利用可能</p>
+        <p class="detail-sub">よりスピード感を持ったコミュニケーションを活性化</p>
       </div>
     </div>
   </div>
 </div>
 <% else %>
   <div class="login-wrapper">
-    <div class="page-top">アポイント一覧</div>
-     <%= form_with(url: search_appointments_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form_with(url: search_appointments_path, local: true, method: :get, class: "search-form") do |form| %>
       <%= form.text_field :keyword, placeholder: "取引先名で検索", class: "search-input" %>
       <%= form.submit "検索", class: "search-btn" %>
     <% end %>

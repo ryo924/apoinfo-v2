@@ -5,10 +5,10 @@
       <%= link_to "編集する", edit_appointment_path(@appointment), class: :show_btn %>
       <%= link_to "削除する", appointment_path(@appointment), method: :delete, class: :show_btn %>
     </div>
-    <div class="show-button">
-      <%= link_to "顧客プロフィール", appointment_profiles_path(@appointment), class: :show_btn %>
-    </div>
   <% end %>
+  <div class="show-button">
+    <%= link_to "顧客プロフィール", appointment_profiles_path(@appointment), class: :show_btn %>
+  </div>
   <table>
     <tr>
       <th>日程</th>

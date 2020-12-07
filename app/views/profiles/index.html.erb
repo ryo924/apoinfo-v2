@@ -1,6 +1,8 @@
 <div class="login-wrapper">
   <div class="profile-button">
-    <%= link_to "顧客プロフィール登録", new_appointment_profile_path(@appointment), class: :profile_btn %>
+    <% if current_user == @appointment.user %>
+      <%= link_to "顧客プロフィール登録", new_appointment_profile_path(@appointment), class: :profile_btn %>
+    <% end %>
   </div>
   <div>
     <%= render partial: 'profile', collection: @profiles %>

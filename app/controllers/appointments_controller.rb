@@ -1,11 +1,10 @@
 class AppointmentsController < ApplicationController
-  
   before_action :set_appointment, except: [:index, :new, :create, :search]
   before_action :authenticate_user!, except: [:index]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
-    @appointments = Appointment.all.order(created_at: "DESC")
+    @appointments = Appointment.all.order(created_at: 'DESC')
   end
 
   def new
@@ -46,10 +45,11 @@ class AppointmentsController < ApplicationController
   end
 
   def search
-    @appointments = Appointment.search(params[:keyword]).order(created_at: "DESC")
+    @appointments = Appointment.search(params[:keyword]).order(created_at: 'DESC')
   end
 
   private
+
   def appointment_params
     params.require(:appointment).permit(:title, :company, :customer, :date, :place, :purpose, :relation_id).merge(user_id: current_user.id)
   end
@@ -61,5 +61,4 @@ class AppointmentsController < ApplicationController
   def contributor_confirmation
     redirect_to root_path unless current_user == @appointment.user
   end
-
 end

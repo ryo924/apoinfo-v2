@@ -2,9 +2,9 @@
 ApoInfo
 
 # アプリケーション概要と制作背景
-チームでの営業活動を支援する、アポイント管理・情報共有を一つにまとめたアプリです。  
-前職で法人営業を行っていた際に、営業活動状況を逐一口頭で上司や同僚に報告するという慣習があり、それが一目見て済むようになるアプリというコンセプトで考えました。  
-報告後には、アドバイスや指示を受けることが多かったので、コミュニケーションが可能になる機能も併せて実装しています。  
+・チームでの営業活動を支援する、アポイント管理・情報共有を一つにまとめたアプリです。  
+・前職で法人営業を行っていた際に、営業活動状況を逐一口頭で上司や同僚に報告するという慣習があり、それが一目見て済むようになるアプリというコンセプトで考えました。  
+・報告後には、アドバイスや指示を受けることが多かったので、コミュニケーションが可能になる機能も併せて実装しています。  
   
 ![トップページ見本](https://user-images.githubusercontent.com/72852755/101456427-5da64000-3977-11eb-8f31-eded5179f9be.png)  
 
@@ -28,36 +28,17 @@ http://54.168.59.129/
 ・静的コード解析（rubocop）  
 ・エラーメッセージの日本語化対応（rails-i18n）  
 
-# 使用技術
-## バックエンド
-Ruby,Ruby on rails
-
-## フロントエンド
-HTML,CSS,Javascript,Ajax
-
-## データベース
-MySQL,SequelPro
-
-## インフラ
-AWS(EC2),Capistrano
-
-## Webサーバ
-Nginx
-
-## アプリケーションサーバ
-Unicorn
-
-## ソース管理
-GitHub, GitHubDesktop
-
-## テスト
-RSpec
-
-## コード解析
-Rubocop
-
-## エディタ
-VSCode
+# 使用技術／開発環境
+・Ruby,Ruby on rails  
+・HTML,CSS,Javascript,Ajax  
+・MySQL,SequelPro  
+・AWS(EC2),Capistrano  
+・Nginx  
+・Unicorn  
+・GitHub, GitHubDesktop  
+・RSpec  
+・Rubocop  
+・VSCode  
 
 # DB設計
 <img width="899" alt="ER図" src="https://user-images.githubusercontent.com/72852755/101456328-3ea7ae00-3977-11eb-8a51-5dea479235a5.png">  

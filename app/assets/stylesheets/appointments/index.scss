@@ -1,0 +1,140 @@
+/* トップページ */
+.wrapper {
+  min-height: 100vh;
+  background-image: image-url('top-page.png');
+  background-size: cover;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  padding: 100px;
+}
+
+.concept {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px black;
+}
+
+.sub-concept {
+  color: white;
+  text-align: center;
+  margin: 20px 0px 50px 0px;
+  font-size: 20px;
+  font-weight: 100;
+  text-shadow: 3px 3px 3px black;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.appointment {
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  margin-right: 50px;
+  font-size: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.appointment:hover {
+  color: #fff;
+  border: black;
+  text-shadow: 3px 3px 3px black
+}
+
+.information {
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  margin-left: 50px;
+  font-size: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.information:hover {
+  color: #fff;
+  border: black;
+  text-shadow: 3px 3px 3px black;
+}
+
+.hidden {
+  display: none;
+}
+
+.detail-show {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 300px;
+  text-shadow: 3px 3px 3px black;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0;
+   animation-name: fadein-bottom;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-top {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.detail-sub {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ログイン後トップページ */
+.login-wrapper {
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+table th {
+  padding: 10px 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #777777;
+  border: 1px solid #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+table td {
+  padding: 30px;
+  text-align: center;
+  background-color: #fff;
+  font-weight: bold;
+}

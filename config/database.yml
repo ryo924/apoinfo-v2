@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: apoinfo_v2_production
-  username: apoinfo_v2
-  password: <%= ENV['APOINFO_V2_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

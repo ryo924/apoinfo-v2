@@ -64,7 +64,7 @@ a {
 /* トップページ */
 .wrapper {
   min-height: 100vh;
-  background-image: image-url("top-page.png");
+  background-image: url("top-page.png");
   background-size: cover;
 }
 
